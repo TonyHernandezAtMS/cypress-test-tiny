@@ -1,3 +1,5 @@
+![Picture to replace]('/images/category.jpg')
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/TonyHernandezAtMS/cypress-test-tiny/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
