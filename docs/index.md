@@ -1,4 +1,4 @@
-![Picture to replace]('images/category.jpg')
+![Picture to replace](images/category.jpg)
 
 ## Welcome to GitHub Pages
 
