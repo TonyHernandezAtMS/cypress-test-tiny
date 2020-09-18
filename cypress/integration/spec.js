@@ -5,7 +5,9 @@ describe("page", () => {
     cy.visit(
       "https://tonyhernandezatms.github.io/cypress-test-tiny/index.html"
     );
-    cy.get("img").its("width").should("eq", 200);
+    cy.get("img")
+      .then(($el) => $el.prop("width"))
+      .should("equal", 200);
   });
 
   it("Static Fixture Image Replacement", () => {
@@ -16,7 +18,9 @@ describe("page", () => {
     cy.visit(
       "https://tonyhernandezatms.github.io/cypress-test-tiny/index.html"
     );
-    cy.get("img").its("width").should("eq", 500);
+    cy.get("img")
+      .then(($el) => $el.prop("width"))
+      .should("equal", 500);
   });
 
   it("Replace image with fixture 1 using command", () => {
@@ -24,7 +28,9 @@ describe("page", () => {
     cy.visit(
       "https://tonyhernandezatms.github.io/cypress-test-tiny/index.html"
     );
-    cy.get("img").its("width").should("eq", 500);
+    cy.get("img")
+      .then(($el) => $el.prop("width"))
+      .should("equal", 500);
   });
 
   it("Replace image with fixture 2 using command", () => {
@@ -32,6 +38,8 @@ describe("page", () => {
     cy.visit(
       "https://tonyhernandezatms.github.io/cypress-test-tiny/index.html"
     );
-    cy.get("img").its("width").should("eq", 750);
+    cy.get("img")
+      .then(($el) => $el.prop("width"))
+      .should("equal", 750);
   });
 });
