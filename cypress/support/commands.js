@@ -31,11 +31,12 @@ function ImageStub(fixtureRoot) {
       "/(?:images)(?<path>(?:/[a-zA-Z0-9-?%]+)*/(?:[0-9a-zA-Z._-]+.(?:png|PNG|gif|GIF|jp[e]?g|JP[E]?G)))"
     );
     const image = new URL(req.url).pathname.match(filePathRegex).groups?.path;
-    const fixturePath = `${fixtureRoot}/images${image},base64`;
+    const fixturePath = `${fixtureRoot}/pictures${image}`;
+    console.log(fixturePath);
     const staticResponse = {
       fixture: fixturePath,
     };
-    req.reply(staticResponse);
+    //req.reply(staticResponse);
   }).as(`cdn-${fixtureRoot}-images`);
 }
 
