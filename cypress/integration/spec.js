@@ -10,9 +10,9 @@ describe("page", () => {
       .should("equal", 200);
   });
 
-  it("Static Fixture Image Replacement", () => {
+  it.only("Static Fixture Image Replacement", () => {
     cy.fixture("fixture1/pictures/category.jpg").then((pic) => {
-      cy.route2("images/category.jpg", pic);
+      cy.route2("images/category.jpg", { body: pic, headers: { 'content-type': 'image/jpeg' } });
     });
 
     cy.visit(
